@@ -32,12 +32,11 @@ public class Member {
     private String password;
     @Column(nullable = false)
     private String name;
-    @CreationTimestamp
-    private Date regdate;
-    @UpdateTimestamp
-    private Date updatedate;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @Enumerated(EnumType.STRING)
+    @Column(name = "Role")
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(name = "Role", joinColumns = @JoinColumn(name = "id"))
     private List<Role> roles = new ArrayList<>();
 
 }
