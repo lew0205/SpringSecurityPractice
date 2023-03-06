@@ -8,8 +8,8 @@ import java.security.Key;
 
 @ConfigurationProperties(prefix = "jwt")
 public class JwtProperties {
-    Key accessSecret;
-    Key refreshSecret;
+    public Key accessSecret;
+    public Key refreshSecret;
 
     public JwtProperties(String accessSecret, String refreshSecret) {
         this.accessSecret = Keys.hmacShaKeyFor(accessSecret.getBytes(StandardCharsets.UTF_8));
