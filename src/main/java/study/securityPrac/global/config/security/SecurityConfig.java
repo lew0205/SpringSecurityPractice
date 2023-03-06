@@ -12,7 +12,6 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import study.securityPrac.global.security.handler.CustomAccessDeniedHandler;
 import study.securityPrac.global.security.handler.CustomAuthenticationEntryPointHandler;
-import study.securityPrac.global.security.jwt.JwtAuthenticationFilter;
 import study.securityPrac.global.security.jwt.JwtExceptionFilter;
 import study.securityPrac.global.security.jwt.JwtRequestFilter;
 import study.securityPrac.global.security.jwt.JwtTokenProvider;
