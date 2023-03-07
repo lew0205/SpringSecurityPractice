@@ -76,11 +76,11 @@ public class JwtTokenProvider {
 
     private Claims getTokenBody(String token, Key secret) {
         Claims claims;
-            claims = Jwts.parserBuilder()
-                .setSigningKey(secret)
-                .build()
-                .parseClaimsJws(token)
-                .body;
+        claims = Jwts.parserBuilder()
+            .setSigningKey(secret)
+            .build()
+            .parseClaimsJws(token)
+            .getBody();
         return claims;
     }
 
